@@ -1,0 +1,3 @@
+svc_host: "foo1.local"
+svc_name: "foo1"
+svc_path: "/vagrant/php-srv/web"
