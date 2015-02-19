@@ -4,11 +4,11 @@
 import urllib, httplib2, json, sys, os
 
 try:
-	health_url = 'http://localhost:80/api/health'
+	# health_url = 'http://localhost:8080/api/health'
 	
 	h = httplib2.Http()
 	
-	resp, content = h.request(health_url, "GET", headers={'Host':sys.argv[1]})
+	resp, content = h.request(sys.argv[1], "GET")
 
 	
 	#print resp

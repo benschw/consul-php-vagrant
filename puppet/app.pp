@@ -29,6 +29,7 @@ node default {
 
 	class { 'apache': 
 		mpm_module => 'prefork',
+		default_vhost => false,
 
 	}
 	class {'::apache::mod::php':}
@@ -38,8 +39,8 @@ node default {
 
 
 
-	apache::vhost { $svc_host:
-		port    => '80',
+	apache::vhost { 'mydefaulthost':
+		port    => '8080',
 		docroot => hiera('svc_path'),
 		directories => [{
 			path => hiera('svc_path'),
@@ -58,7 +59,7 @@ node default {
 	}->
 	class { 'consul_client': 
 		service_name => hiera('svc_name'),
-		health_path  => "/usr/bin/python /vagrant/health.py ${svc_host}",
+		health_path  => "/usr/bin/python /vagrant/health.py http://localhost:8080/api/health",
 	}
 
 

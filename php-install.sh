@@ -1,3 +1,3 @@
 #!/bin/bash
 
-composer create-project fliglio/app --dev php-srv
+composer create-project benschw/consulphpdemo --dev php-srv

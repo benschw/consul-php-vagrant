@@ -1,3 +1,3 @@
 svc_host: "foo0.local"
-svc_name: "foo0"
+svc_name: "foo"
 svc_path: "/vagrant/php-srv/web"

@@ -33,7 +33,7 @@ class consul_client (
 
 	consul::service { $service_name:
 		tags           => ['php'],
-		port           => 80,
+		port           => 8080,
 		check_script   => $health_path,
 		check_interval => '5s',
 	}
