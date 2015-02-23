@@ -23,7 +23,7 @@ import "classes/*"
 node default {
 	include apt
 
-	package {["php5-cli", ]:
+	package {["php5-cli", "php5-curl"]:
 		ensure => present,
 	}
 
