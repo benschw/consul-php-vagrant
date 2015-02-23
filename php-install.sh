@@ -1,3 +1,3 @@
 #!/bin/bash
 
-composer create-project consul-app --dev demo
+composer create-project fliglio/consul-app --dev demo
