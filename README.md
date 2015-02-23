@@ -2,6 +2,8 @@
 
 A vagrant cluster demoing a single "demo" service discovering one of two "foo" services. The vms are provisioned with vagrant and puppet, the foo services are registered using a service definition config provided by the consul puppet module, and the demo service discovers "foo" through the dns server provided by the consul agent. Dnsmasq is leveraged to integrate the consul dns server natural dns request can be used.
 
+A single demo application is used for the "demo" service and two "foo" services (it contains a "DemoResource" and a "FooResource") to make tinkering with the demo easier. Just try to ignore the resource that doesn't belong to the service you are using.
+
 ### Usage
 
 run `deps-puppet.sh` to grab puppet dependencies, `php-install.sh` to pull down the php demo app, then `vagrant up`
