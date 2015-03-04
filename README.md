@@ -10,12 +10,14 @@ A single demo application is used for the "demo" service and two "foo" services 
 Make sure you have...
 - [Vagrant](https://www.vagrantup.com/downloads.html)
 - [Composer](https://getcomposer.org/download/)
+<!-- break -->
 
 	git clone https://github.com/fliglio/fliglio-consul-vagrant.git
 	cd fliglio-consul-vagrant
 	./puppet-deps.sh
 	composer create-project fliglio/consul-app --dev demo
 	vagrant up
+
 
 - `puppet-deps.sh` will pull in puppet module dependencies in `./puppet/modules` for vagrant to leverage
 - `composer create-project...` installs the demo php app in `./demo` (the vagrant vhosts will point to this)
