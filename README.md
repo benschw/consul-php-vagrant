@@ -7,7 +7,10 @@ The vms are provisioned with vagrant and puppet, the foo services are registered
 A single demo application is used for the "demo" service and two "foo" services (it contains a "DemoResource" and a "FooResource") to make tinkering with the demo easier. 
 
 ### Getting Started
-	
+Make sure you have...
+- [Vagrant](https://www.vagrantup.com/downloads.html)
+- [Composer](https://getcomposer.org/download/)
+
 	git clone https://github.com/fliglio/fliglio-consul-vagrant.git
 	cd fliglio-consul-vagrant
 	./puppet-deps.sh
